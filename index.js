@@ -22,7 +22,7 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 console.log(uri);
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 client.connect(err => {
-  const productCollection = client.db("superFoodVillage").collection("product");
+  const productCollection = client.db("sunRiseMart").collection("products");
   
     app.get('/products', (req, res) => {
         productCollection.find()
